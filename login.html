@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EduNook LMS | Login/Register</title>
+    <link rel="stylesheet" href="../assets/css/login.css">
+</head>
+<body>
+    <div class="login-wrapper">
+
+        <!-- Left Panel -->
+        <div class="info-box">
+            <h1>Welcome to EduNook LMS</h1>
+            <p>Learn, track your progress, and connect with peers in one place.</p>
+            <div class="info-buttons">
+            </div>
+        </div>
+
+        <!-- Right Panel -->
+        <div class="form-box">
+
+            <!-- Login Form -->
+            <form id="login-form" action="login.php" method="POST" autocomplete="off">
+                <!-- Hidden dummy fields to prevent browser autofill -->
+                <input type="text" style="display:none">
+                <input type="password" style="display:none">
+
+                <h2>Login</h2>
+                <label for="email">Email</label>
+                <input type="email" name="email" id="email" autocomplete="off" required>
+                <label for="password">Password</label>
+                <input type="password" name="password" id="password" autocomplete="new-password" required>
+                <button type="submit">Login</button>
+                <!-- Register link -->
+                <p>Don't have an account? <a href="register.php" class="switch-link">Register</a></p>
+            </form>
+
+            <!-- Register Form (hidden, kept for JS if needed) -->
+            <form id="register-form" action="register.php" method="POST" class="hidden" autocomplete="off">
+                <!-- Hidden dummy fields to prevent browser autofill -->
+                <input type="text" style="display:none">
+                <input type="password" style="display:none">
+
+                <h2>Register</h2>
+                <label for="firstname">First Name</label>
+                <input type="text" name="firstname" id="firstname" autocomplete="given-name" required>
+
+                <label for="lastname">Last Name</label>
+                <input type="text" name="lastname" id="lastname" autocomplete="family-name" required>
+
+                <label for="email-reg">Email</label>
+                <input type="email" name="email" id="email-reg" autocomplete="new-email" required>
+
+                <label for="password-reg">Password</label>
+                <input type="password" name="password" id="password-reg" autocomplete="new-password" required>
+
+                <button type="submit">Register</button>
+                <p>Already have an account? <span id="switch-to-login" class="switch-link">Login</span></p>
+            </form>
+
+        </div>
+
+    </div>
+
+    <script src="../assets/js/login.js"></script>
+</body>
+</html>

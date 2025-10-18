@@ -1,0 +1,236 @@
+/* Reset & base */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Inter", sans-serif;
+}
+
+html, body {
+  height: 100%;
+}
+
+body {
+  background: #e9f0f7;
+  min-height: 100vh;
+  display: flex;
+}
+
+/* Container */
+.dashboard-container {
+  display: flex;
+  width: 100%;
+  min-height: 100vh;
+}
+
+/* Sidebar */
+.sidebar {
+  width: 260px;
+  background: linear-gradient(180deg, #007bff, #00c6ff);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 36px;
+  color: white;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+.logo-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 46px;
+}
+
+.sidebar-logo {
+  width: 110px;
+  height: auto;
+  background: none !important;   /* remove any CSS background */
+  padding: 0;
+  margin-bottom: 12px;
+  box-shadow: none;
+}
+
+.brand-name {
+  font-size: 22px;
+  font-weight: 700;
+  letter-spacing: 0.6px;
+}
+
+.nav-menu {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  width: 100%;
+  padding-left: 60px;
+}
+
+.nav-menu a {
+  color: white;
+  font-size: 17px;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  transition: transform 0.18s ease, opacity 0.18s ease;
+}
+
+.nav-menu a:hover {
+  transform: translateX(6px);
+  opacity: 0.95;
+}
+
+.logout {
+  margin-top: auto;
+  margin-bottom: 36px;
+  color: #ffe5e5;
+  font-weight: 600;
+}
+
+/* Main content area */
+.main-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  justify-content: flex-start;
+  padding-top: 36px;      /* reduced slightly to better balance top space */
+  padding-left: 40px;
+  padding-right: 40px;
+  overflow-x: hidden;
+}
+
+/* ---------- TOP NAV CARDS (compact topbar) ---------- */
+.top-nav-cards {
+  display: flex;
+  justify-content: center;
+  gap: 40px;              /* increased gap for balanced spacing */
+  margin-bottom: 26px;    /* space between top cards and welcome heading */
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+/* Each small card */
+.nav-card {
+  background: white;
+  border-radius: 12px;
+  width: 190px;           /* compact width */
+  height: 72px;           /* compact height */
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  padding: 10px 14px;
+  box-shadow: 0 6px 18px rgba(16,24,40,0.06);
+  cursor: pointer;
+  transition: transform 0.18s ease, box-shadow 0.18s ease;
+}
+
+/* icon area inside card */
+.nav-card-icon {
+  font-size: 20px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* text inside card */
+.nav-card-text {
+  font-size: 15px;
+  color: #111827;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+/* Hover state */
+.nav-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 10px 24px rgba(16,24,40,0.12);
+}
+
+/* ---------- Welcome heading ---------- */
+.main-content h1 {
+  font-size: 36px;
+  color: #0f172a;
+  font-weight: 800;
+  margin-bottom: 18px;
+}
+
+.highlight {
+  color: #2563eb; /* blue color for "EduNook" */
+}
+
+/* ---------- Main center logo ---------- */
+/* Balanced but larger: not too huge to hide slogan */
+.main-logo {
+  width: 300px;        /* larger but balanced so tagline stays visible */
+  height: auto;
+  display: block;
+  margin: 18px auto 14px auto;
+  background: none !important;  /* ensure no CSS background */
+  border: none;
+  border-radius: 50%;
+  box-shadow: none !important;
+  padding: 0;
+}
+
+/* ---------- Tagline / slogan ---------- */
+.tagline {
+  font-size: 18px;
+  font-style: italic;
+  color: #374151;
+  margin-top: 8px;
+  margin-bottom: 28px;  /* some bottom breathing room */
+}
+
+/* ---------- Responsive adjustments ---------- */
+@media (max-width: 1024px) {
+  .main-logo {
+    width: 240px;
+  }
+  .top-nav-cards {
+    gap: 28px;
+  }
+}
+
+@media (max-width: 768px) {
+  .dashboard-container {
+    flex-direction: column;
+  }
+
+  .sidebar {
+    width: 100%;
+    flex-direction: row;
+    justify-content: space-around;
+    padding: 12px 0;
+  }
+
+  .nav-menu {
+    display: none; /* optional: hide long sidebar menu on small screens */
+  }
+
+  .top-nav-cards {
+    width: 100%;
+    justify-content: space-evenly;
+    gap: 14px;
+    margin-bottom: 18px;
+  }
+
+  .nav-card {
+    width: 150px;
+    height: 64px;
+    padding: 8px 10px;
+  }
+
+  .main-logo {
+    width: 200px;
+    margin: 16px auto 12px;
+  }
+
+  .main-content h1 {
+    font-size: 28px;
+  }
+}

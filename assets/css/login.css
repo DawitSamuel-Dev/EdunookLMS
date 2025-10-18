@@ -1,0 +1,151 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+/* Wrapper */
+.login-wrapper {
+    display: flex;
+    height: 100vh;
+    width: 100%;
+}
+
+/* Left Panel */
+.info-box {
+    flex: 1;
+    background: #180065;
+    color: rgb(255, 255, 255);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 40px;
+}
+
+.info-box h1 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.info-box p {
+    font-size: 18px;
+    line-height: 1.4;
+    margin-bottom: 30px;
+}
+
+.info-buttons button {
+    padding: 12px 25px;
+    margin: 5px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: 0.3s;
+}
+
+.info-buttons .active-btn {
+    background: #fff;
+    color: #080909;
+}
+
+.info-buttons button:not(.active-btn) {
+    background: transparent;
+    color: #fff;
+    border: 1px solid #fff;
+}
+
+.info-buttons button:hover {
+    opacity: 0.9;
+}
+
+/* Right Panel */
+.form-box {
+    position: relative;
+    flex: 1;
+    background: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px;
+    text-align: center;
+    overflow: hidden;
+    transition: all 0.6s ease-in-out;
+}
+
+form {
+    width: 100%;
+    max-width: 400px;
+    display: flex;
+    flex-direction: column;
+    transition: all 0.6s ease-in-out;
+}
+
+form.hidden {
+    display: none;
+}
+
+form h2 {
+    color: #03175f;
+    margin-bottom: 20px;
+    font-size: 28px;
+}
+
+form label {
+    text-align: left;
+    margin-bottom: 5px;
+    font-weight: 500;
+    color: #0d0e0f;
+}
+
+form input {
+    padding: 10px;
+    margin-bottom: 15px;
+    border-radius: 6px;
+    border: 1px solid #dcdde1;
+    outline: none;
+}
+
+form input:focus {
+    border-color: #000000;
+}
+
+form button {
+    padding: 12px;
+    background: #180067;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: 0.3s;
+}
+
+form button:hover {
+    background: #0b0c0c;
+}
+
+form p {
+    margin-top: 15px;
+    color: #030303;
+}
+
+.switch-link {
+    color: #032a72;
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+    .login-wrapper {
+        flex-direction: column;
+    }
+    .info-box, .form-box {
+        width: 100%;
+        height: 50%;
+    }
+}

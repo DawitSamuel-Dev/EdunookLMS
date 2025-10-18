@@ -1,0 +1,97 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: #122574;
+}
+
+/* Wrapper to center the form */
+.form-wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+/* Registration form styling */
+.register-form {
+  background: rgb(255, 255, 255);
+  padding: 40px 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  width: 100%;
+  max-width: 500px;
+  display: flex;
+  flex-direction: column;
+}
+
+.register-form h2 {
+  color: #0303e8;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.register-form label {
+  display: block;
+  margin-bottom: 5px;
+  color: #000000;
+}
+
+.register-form input,
+.register-form select {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border-radius: 6px;
+  border: 1px solid #1d307d;
+  outline: none;
+  transition: 0.3s;
+}
+
+.register-form input:focus,
+.register-form select:focus {
+  border-color: #2714a1;
+}
+
+.register-form button {
+  width: 100%;
+  padding: 12px;
+  background: #1a05d8;
+  color: rgb(254, 255, 253);
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 0.3s;
+  font-size: 16px;
+}
+
+.register-form button:hover {
+  background: #1d008f;
+}
+
+.register-form p {
+  margin-top: 15px;
+  color: #050506;
+  text-align: center;
+}
+
+.register-form a {
+  color: #3904d6;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.register-form a:hover {
+  text-decoration: underline;
+}
+
