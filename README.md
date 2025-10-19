@@ -56,7 +56,7 @@ dawitedunooklms/
 
 
 ---
-
+```
 ## 🏗️ Tech Stack
 
 | Layer | Technology |
@@ -71,14 +71,14 @@ dawitedunooklms/
 ---
 
 ## 🏁 Credits
-```
+
 👨‍💻 **Developer:** Dawit Samuel  
 🌍 **Subdomain:** [dawitedunooklms.eagletechafrica.com](https://dawitedunooklms.eagletechafrica.com)  
 🎓 **Training:** RITA Africa Cloud Computing Program  
 📅 **Year:** 2025  
 
 ---
-
+`
 ## 💡 Future Improvements
 
 - ✅ Add role-based access (Admin, Teacher, Student)  
