@@ -77,9 +77,15 @@ By completing this project, I gained hands-on experience in:
 
 dawitedunooklms/
 ├── assets/
-│ ├── css/ (dashboard.css, login.css, styles.css)
-│ ├── js/ (dashboard.js, login.js)
-│ └── images/ (logo.png)
+│ ├── css/
+│ │ ├── dashboard.css
+│ │ ├── login.css
+│ │ └── styles.css
+│ ├── js/
+│ │ ├── dashboard.js
+│ │ └── login.js
+│ └── images/
+│ └── logo.png
 ├── config/
 │ └── db_config.php
 ├── dashboard.php
@@ -90,7 +96,6 @@ dawitedunooklms/
 ├── register.php
 ├── resend_verification.php
 └── verify_email.php
-
 
 ---
 
