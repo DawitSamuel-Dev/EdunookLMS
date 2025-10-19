@@ -1,0 +1,15 @@
+config/db_config.php
+
+# Ignore sensitive config
+config/db_config.php
+
+# Ignore environment files
+.env
+
+# Ignore system files
+.DS_Store
+Thumbs.db
+
+# Ignore IDE/project files
+.vscode/
+.idea/
