@@ -94,3 +94,13 @@ dawitedunooklms/
 🔗 GitHub: [@DawitSamuel-Dev](https://github.com/DawitSamuel-Dev)
 
 ---
+## 📸 Project Screenshots
+
+### 🧾 Registration Page
+![Registration Page](screenshots/register.jpg)
+
+### 🔐 Login Page
+![Login Page](screenshots/login.jpg)
+
+### 🏠 Dashboard
+![Dashboard](screenshots/dashboard.jpg)
