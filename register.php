@@ -9,22 +9,31 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         exit("Invalid submission detected.");
     }
 
-    // Collect and sanitize inputs
-    $firstname = trim($_POST['firstname']);
-    $lastname  = trim($_POST['lastname']);
-    $email     = trim($_POST['email']);
-    $gender    = trim($_POST['gender']);
-    $dob       = trim($_POST['dob']);
+    // 🧹 Sanitize & validate inputs
+    $firstname = htmlspecialchars(trim($_POST['firstname']), ENT_QUOTES, 'UTF-8');
+    $lastname  = htmlspecialchars(trim($_POST['lastname']), ENT_QUOTES, 'UTF-8');
+    $email     = filter_var(trim($_POST['email']), FILTER_SANITIZE_EMAIL);
+    $gender    = htmlspecialchars(trim($_POST['gender']), ENT_QUOTES, 'UTF-8');
+    $dob       = htmlspecialchars(trim($_POST['dob']), ENT_QUOTES, 'UTF-8');
     $password  = password_hash($_POST['password'], PASSWORD_DEFAULT);
+
+    // ✅ Server-side email validation
+    if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
+        echo "<script>alert('Invalid email format'); window.location='register.html';</script>";
+        exit;
+    }
 
     // Generate a unique token for email verification
     $token = random_int(100000, 999999);
 
     // Insert into database with verification fields
     $sql = "INSERT INTO students (firstname, lastname, email, password, gender, dob, token, email_verified, active)
-            VALUES ('$firstname', '$lastname', '$email', '$password', '$gender', '$dob', '$token', 0, 1)";
+            VALUES (?, ?, ?, ?, ?, ?, ?, 0, 1)";
+    
+    $stmt = $conn->prepare($sql);
+    $stmt->bind_param("ssssssi", $firstname, $lastname, $email, $password, $gender, $dob, $token);
 
-    if ($conn->query($sql) === TRUE) {
+    if ($stmt->execute()) {
         // Prepare verification email
         $verify_link = "https://dawitedunooklms.eagletechafrica.com/verify_email.php?token=" . $token;
         $subject = "Verify Your Email - Dawit LMS";
@@ -38,8 +47,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         window.location='verify_email.php';</script>";
         exit;
     } else {
-        echo "Error: " . $conn->error;
+        echo "Error: " . $stmt->error;
     }
+
+    $stmt->close();
+    $conn->close();
 
 } else {
     // If not POST request
