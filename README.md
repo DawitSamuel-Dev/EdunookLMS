@@ -104,3 +104,7 @@ dawitedunooklms/
 
 ### 🏠 Dashboard
 ![Dashboard](screenshots/dashboard.jpg)
+## 📸 Project Screenshots
+
+### 🧭 Admin Dashboard
+![Admin Dashboard](screenshots/admindash.jpg)
