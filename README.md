@@ -108,3 +108,19 @@ dawitedunooklms/
 
 ### 🧭 Admin Dashboard
 ![Admin Dashboard](screenshots/admindash.jpg)
+
+# EdunookLMS
+
+## Screenshots
+
+### Courses Dashboard
+![Courses Dashboard](screenshots/courses-dash.jpg)
+
+### Payment Dashboard
+![Payment Dashboard](screenshots/payment-dash.jpg)
+
+### PayPal Integration
+![PayPal Integration](screenshots/paypal.jpg)
+
+### Pay-Course Flow
+![Pay-Course Flow](screenshots/pay-course.jpg)
