@@ -109,10 +109,6 @@ dawitedunooklms/
 ### 🧭 Admin Dashboard
 ![Admin Dashboard](screenshots/admindash.jpg)
 
-# EdunookLMS
-
-## Screenshots
-
 ### Courses Dashboard
 ![Courses Dashboard](screenshots/courses-dash.jpg)
 
