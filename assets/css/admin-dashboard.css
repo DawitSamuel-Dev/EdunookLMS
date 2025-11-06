@@ -21,11 +21,17 @@ body {
 /* Sidebar */
 .sidebar {
   width: 250px;
-  background-color: #1e3a8a;
+  height: 100vh; /* ensures it fills the full screen height */
+  background: linear-gradient(to bottom, #1e3a8a, #0f172a); /* smooth blue gradient */
   color: #fff;
   display: flex;
   flex-direction: column;
+  justify-content: space-between; /* keeps Logout near bottom */
   padding: 20px;
+  box-sizing: border-box;
+  position: fixed; /* optional - keeps sidebar fixed while scrolling */
+  left: 0;
+  top: 0;
 }
 
 .sidebar .logo {

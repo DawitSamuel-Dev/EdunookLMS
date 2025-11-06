@@ -41,6 +41,7 @@ if (!isset($_SESSION['firstname'])) {
 
             <nav class="nav-menu">
                 <a href="#"><span>📘</span> Courses</a>
+                <a href="payment.php"><span>💳</span> Payments</a>
                 <a href="#"><span>📁</span> Resources</a>
                 <a href="#"><span>👥</span> Community</a>
                 <a href="logout.php" class="logout"><span>↩️</span> Logout</a>
